@@ -1,0 +1,17 @@
+
+ create table st
+ (
+   sid int,
+   sname varchar(30)
+ )
+ /
+
+
+declare
+	sid st.sid%type;
+	sname st.sname%type;
+begin
+	select sid ,sname into sid,sname from st where sid=102;
+	dbms_output.put_line('sid='||sid||'sname='||sname);
+end;
+/
